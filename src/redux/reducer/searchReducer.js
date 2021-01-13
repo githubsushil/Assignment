@@ -1,5 +1,5 @@
 
-import { SEARCH_MOVIE, FETCH_MOVIES, LOADING, SEARCHED_MOVIE } from "../movieAction/type";
+import { SEARCH_MOVIE, FETCH_MOVIES, LOADING, SEARCHED_MOVIE } from "../action/type";
 
 const initialState = {
     text: '',

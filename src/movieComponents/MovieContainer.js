@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MovieCard from './MovieCard';
 import { connect } from "react-redux";
-import { featchMovie, setLoading } from "../movieRedux/movieAction/searchAction";
+import { featchMovie, setLoading } from "../redux/action/searchAction";
 
 class MovieContainer extends Component {
 

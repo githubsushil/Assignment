@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { searchMovie, featchMovie, searchedMovie } from "../movieRedux/movieAction/searchAction";
+import { searchMovie, featchMovie, searchedMovie } from "../redux/action/searchAction";
 
 class MovieSearchForm extends Component {
   constructor(props) {
@@ -12,11 +12,10 @@ class MovieSearchForm extends Component {
   componentDidMount() {
     localStorage.setItem("history", JSON.stringify(this.props.text));
   }
-  
+
   onChange = e => {
     this.props.searchMovie(e.target.value);
-
-
+    localStorage.setItem("history", JSON.stringify(this.props.text));
   };
 
   onSubmit = e => {
