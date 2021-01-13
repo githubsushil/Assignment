@@ -1,6 +1,4 @@
 import React from 'react'
-import "bootstrap/dist/css/bootstrap.css"
-import { Link } from "react-router-dom"
 
 
 
@@ -20,7 +18,3 @@ const MovieCard = ({ movie }) => {
 }
 
 export default MovieCard;
-
-//src={movie.Poster}
-// {movie.Title} - {movie.Year}
-//to={'/movie/' + movie.imdbID}

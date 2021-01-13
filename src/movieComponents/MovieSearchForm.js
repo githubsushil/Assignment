@@ -11,8 +11,8 @@ class MovieSearchForm extends Component {
   }
   componentDidMount() {
     localStorage.setItem("history", JSON.stringify(this.props.text));
-
   }
+  
   onChange = e => {
     this.props.searchMovie(e.target.value);
 
@@ -51,22 +51,27 @@ class MovieSearchForm extends Component {
               placeholder="Search Movies, TV Series ..."
               onChange={this.onChange}
             />
+            <div className="bg-light p-3">
+              <h5>Your Recent searches</h5>
+              {
+                this.state.history ? this.state.history.map((item, index) => {
+                  return (
+
+                    <div className="col-12 justify-content-start" key={index}>
+                      <p>{item}</p>
+                    </div>
+
+                  )
+                }) : 'no history'
+              }
+            </div>
+
             <button type="submit" className="btn btn-primary btn-bg mt-3">
               Search
             </button>
 
           </form>
-          <div>
-            {
-              this.state.history ? this.state.history.map((item, index) => {
-                return (
-                  <ul key={index}>
-                    <li>{item}</li>
-                  </ul>
-                )
-              }) : 'no history'
-            }
-          </div>
+
         </div>
       </div>
     )
